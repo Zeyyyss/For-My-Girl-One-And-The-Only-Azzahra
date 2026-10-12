@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>you & me ♡</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #faf6f3;
+      font-family: Arial, sans-serif;
+      color: #55464a;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 390px;
+      padding: 35px 25px;
+      background: #fffdfc;
+      border: 1px solid #eee3e0;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 12px 35px #5e45440c;
+    }
+
+    .heart {
+      color: #cc91a1;
+      font-size: 27px;
+      margin-bottom: 20px;
+    }
+
+    .label {
+      color: #a68c89;
+      font-size: 10px;
+      letter-spacing: 3px;
+    }
+
+    h1 {
+      font-size: 34px;
+      font-weight: 400;
+      margin: 18px 0 12px;
+    }
+
+    .subtitle {
+      color: #988580;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .divider {
+      height: 1px;
+      background: #eee5e1;
+      margin: 25px 0;
+    }
+
+    .section-title {
+      color: #a17c83;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .years {
+      font-size: 27px;
+      margin: 12px 0 8px;
+      font-weight: 400;
+    }
+
+    .duration {
+      color: #8f7c77;
+      font-size: 12px;
+    }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .time-box {
+      background: #f8efee;
+      padding: 13px 3px;
+      border-radius: 10px;
+    }
+
+    .number {
+      font-size: 22px;
+      color: #85616d;
+    }
+
+    .unit {
+      font-size: 9px;
+      color: #a48a8b;
+      margin-top: 6px;
+    }
+
+    .anniversary-date {
+      margin-top: 15px;
+      font-size: 12px;
+      color: #9b8281;
+    }
+
+    button {
+      background: #d5a0ad;
+      color: white;
+      border: none;
+      padding: 13px 23px;
+      border-radius: 30px;
+      margin-top: 22px;
+      cursor: pointer;
+      font-size: 12px;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #c48b9c;
+      transform: translateY(-2px);
+    }
+
+    #note {
+      display: none;
+      border-top: 1px solid #eee5e1;
+      margin-top: 24px;
+      padding-top: 20px;
+      animation: fade 0.6s ease;
+    }
+
+    #note p {
+      color: #806d69;
+      font-size: 12px;
+      line-height: 2;
+    }
+
+    .footer {
+      margin-top: 27px;
+      color: #b29a96;
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="card">
+
+    <div class="heart">♡</div>
+
+    
+<div class="label">A LITTLE WEBSITE FOR SOMEONE SPECIAL</div>
+
+<h1>for Azzahra, ♡</h1>
+
+<div class="subtitle">
+  my favorite person,<br>
+  since September 15, 2022.
+</div>
+
+
+    <div class="divider"></div>
+
+    <div class="section-title">WE'VE BEEN TOGETHER FOR</div>
+
+    <div class="years" id="years">4 years ♡</div>
+
+    <div class="duration" id="duration">
+      and still choosing you, every day.
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section-title">
+      COUNTING DOWN TO OUR NEXT ANNIVERSARY
+    </div>
+
+    <div class="countdown">
+
+      <div class="time-box">
+        <div class="number" id="days">000</div>
+        <div class="unit">DAYS</div>
+      </div>
+
+      <div class="time-box">
+        <div class="number" id="hours">00</div>
+        <div class="unit">HOURS</div>
+      </div>
+
+      <div class="time-box">
+        <div class="number" id="minutes">00</div>
+        <div class="unit">MINUTES</div>
+      </div>
+
+      <div class="time-box">
+        <div class="number" id="seconds">00</div>
+        <div class="unit">SECONDS</div>
+      </div>
+
+    </div>
+
+    <div class="anniversary-date" id="anniversaryDate">
+      September 15, 2027 ♡
+    </div>
+
+    <button onclick="toggleNote()" id="noteButton">
+      a little note for you ♡
+    </button>
+
+    <div id="note">
+
+      
+<p>
+  hey, Azzahra.
+</p>
+
+<p>
+  out of all the people in this world,<br>
+  I'm glad I got to meet you.
+</p>
+
+<p>
+  makasih udah jadi bagian dari hidup aku.<br>
+  I may not say it all the time,<br>
+  but you mean more to me than you know.
+</p>
+
+<p>
+  four years, so many memories,<br>
+  and still, it's you. always you. ♡
+</p>
+
+
+      <div class="heart">♥</div>
+
+      <p>always rooting for us.</p>
+
+    </div>
+
+    <div class="footer">
+      MADE WITH LOVE, JUST FOR YOU.
+    </div>
+
+  </main>
+
+  <script>
+    const startDate = new Date(2022, 8, 15);
+
+    function updateCountdown() {
+      const now = new Date();
+
+      // Find our next September 15
+      let nextYear = now.getFullYear();
+
+      let nextDate = new Date(
+        nextYear, 8, 15, 0, 0, 0
+      );
+
+      if (now >= nextDate) {
+        nextYear++;
+        nextDate = new Date(
+          nextYear, 8, 15, 0, 0, 0
+        );
+      }
+
+      // Countdown
+      const difference = nextDate - now;
+
+      const days = Math.floor(
+        difference / (1000 * 60 * 60 * 24)
+      );
+
+      const hours = Math.floor(
+        (difference / (1000 * 60 * 60)) % 24
+      );
+
+      const minutes = Math.floor(
+        (difference / (1000 * 60)) % 60
+      );
+
+      const seconds = Math.floor(
+        (difference / 1000) % 60
+      );
+
+      document.getElementById("days").textContent =
+        String(days).padStart(3, "0");
+
+      document.getElementById("hours").textContent =
+        String(hours).padStart(2, "0");
+
+      document.getElementById("minutes").textContent =
+        String(minutes).padStart(2, "0");
+
+      document.getElementById("seconds").textContent =
+        String(seconds).padStart(2, "0");
+
+      document.getElementById("anniversaryDate").textContent =
+        nextDate.toLocaleDateString("en-US", {
+          month: "long",
+          day: "numeric",
+          year: "numeric"
+        }) + " ♡";
+
+      // Calculate time together
+      let years = now.getFullYear() - 2022;
+      let months = now.getMonth() - 8;
+
+      if (now.getDate() < 15) {
+        months--;
+      }
+
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+
+      const lastAnniversary = new Date(
+        now.getFullYear(), 8, 15
+      );
+
+      if (now < lastAnniversary) {
+        years--;
+      }
+
+      const anniversaryThisYear = new Date(
+        now.getFullYear(), 8, 15
+      );
+
+      const lastDate = now >= anniversaryThisYear
+        ? anniversaryThisYear
+        : new Date(now.getFullYear() - 1, 8, 15);
+
+      let completedYears = now.getFullYear() -
+        lastDate.getFullYear();
+
+      let completedMonths = now.getMonth() -
+        lastDate.getMonth();
+
+      let completedDays = now.getDate() -
+        lastDate.getDate();
+
+      if (completedDays < 0) {
+        completedMonths--;
+        const previousMonth = new Date(
+          now.getFullYear(), now.getMonth(), 0
+        );
+        completedDays += previousMonth.getDate();
+      }
+
+      if (completedMonths < 0) {
+        completedYears--;
+        completedMonths += 12;
+      }
+
+      const totalYears = now.getFullYear() - 2022 -
+        (now < new Date(now.getFullYear(), 8, 15) ? 1 : 0);
+
+      document.getElementById("years").textContent =
+        totalYears + (totalYears === 1 ? " year ♡" : " years ♡");
+
+      document.getElementById("duration").textContent =
+        completedMonths + " months, " +
+        completedDays + " days into another year together.";
+    }
+
+    function toggleNote() {
+      const note = document.getElementById("note");
+      const button = document.getElementById("noteButton");
+
+      if (note.style.display === "block") {
+        note.style.display = "none";
+        button.textContent = "a little note for you ♡";
+      } else {
+        note.style.display = "block";
+        button.textContent = "close note ♡";
+      }
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+
+</body>
+</html>
